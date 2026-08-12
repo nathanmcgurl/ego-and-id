@@ -1,0 +1,38 @@
+# Project TODO
+
+- [x] Create the Socket.io server integration and client connection lifecycle for real-time room synchronization.
+- [x] Define persisted data models for rooms, players, prompt catalog entries, rounds, submitted IDs, guesses, rankings, scores, and completed game sessions.
+- [x] Add database migrations and prompt seed data with safe validation for the game’s selectable prompt catalog.
+- [x] Build the Memphis-inspired landing page with a soft peach canvas, pastel geometric accents, high-contrast black display typography, game rules, and create/join entry points.
+- [x] Build the host room-creation flow that generates a unique human-readable room code and takes the host into a waiting lobby.
+- [x] Build the player room-join flow accepting a room code and display name/ID, with clear invalid-room and duplicate-name feedback.
+- [x] Build a responsive room lobby showing connected players, readiness status, host controls, and a host-only Start Game action.
+- [x] Implement judge selection and rotation, keeping the active judge’s secret prompt private from other players.
+- [x] Implement the judge’s secret-selection view with exactly 10 eligible prompt choices per round.
+- [x] Implement the original non-judge ID-submission phase; later superseded by direct Judge ranking after user testing.
+- [x] Implement the judge ranking phase with accessible drag-and-drop ordering from best to worst fit for the secret prompt.
+- [x] Implement the original two-step reveal and guessing phase; later superseded by the combined ranking-and-prompts screen after user testing.
+- [x] Implement live scoring, including ranking-position points, correct prompt-guess points, and an in-game leaderboard synchronized to every player.
+- [x] Implement round advancement, game completion, and final leaderboard state with graceful reconnect and late-join protections.
+- [x] Build a protected prompt-management experience for the project owner, including create, edit, delete, risk flagging, and validated CSV import preparation.
+- [x] Add unit tests covering room creation, room joining, phase transitions, prompt selection count, scoring rules, and ranking validation.
+- [x] Verify desktop and mobile layouts, real-time synchronization, accessibility states, and error handling in the browser.
+- [x] Save a completed project checkpoint after all checklist items are verified and marked complete.
+- [x] Add explicit unit tests for successful room joining, invalid room codes, and duplicate display-name rejection.
+- [x] Perform and document browser verification for the lobby, live game stages, multi-client synchronization, and key accessibility/error states; document the protected prompt-studio interaction boundary separately.
+- [x] Skip authenticated owner prompt-studio create, edit, delete, and CSV-import interaction testing for this delivery per the no-intervention boundary; validate those protected procedures through the non-intervention test harness instead.
+- [x] Verify keyboard focus and keyboard drag-and-drop interaction on the live judge-ranking screen in the browser.
+- [x] Remove the owner-login browser-intervention requirement from final verification and clearly document that this protected interaction was not exercised in the current unauthenticated session.
+- [x] Add a non-user-intervention test harness for owner-authorized prompt create, update, import, and delete procedures, using temporary records and cleanup so protected behavior is validated without browser takeover.
+
+- [x] Diagnose and fix the scoring bug where wrong answers awarded points.
+- [x] Refactor the game engine to remove the player ID submission phase.
+- [x] Update the game engine so the Judge directly ranks players after selecting the prompt.
+- [x] Modify the reveal phase to show both the ranking and all 10 prompt options simultaneously for player guessing.
+- [x] Implement camera capture for user avatars during signup/display-name entry.
+- [x] Save a revised checkpoint containing the user-testing feedback changes and validation evidence.
+- [x] Create a clean, secret-free project export archive (`ego-id-game-backup.tar.gz`) and upload it for immediate download and GitHub import.
+- [x] Transfer the clean project backup archive to `https://github.com/nathanmcgurl/ego-and-id` and verify commit `bb3cb2c` on `main`.
+- [x] Write and deliver a complete Markdown developer handover document covering the stable codebase, setup, architecture, game rules, tests, deployment, and future work.
+- [ ] Replace the archive-only GitHub backup with the complete, browsable source tree and `DEVELOPER_HANDOVER.md`, excluding secrets and generated files.
+- [ ] Verify the committed GitHub source tree and document the recovery path.
